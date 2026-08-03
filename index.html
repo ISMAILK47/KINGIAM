@@ -108,7 +108,56 @@ placeholder="Search Coins, Contract Address or Wallet">
         <p>🔴 Sellers: <strong>32%</strong></p>
 
         <progress value="32" max="100"></progress>
+<script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
+        // 1. Kirkiro Chart din
+const chartContainer = document.getElementById('live-chart');
+const chart = LightweightCharts.createChart(chartContainer, {
+    width: chartContainer.clientWidth,
+    height: 250,
+    layout: {
+        backgroundColor: '#0d0e15', // Yanayin duhu irin na UI dinki
+        textColor: '#8b93b6',
+    },
+    grid: {
+        vertLines: { color: 'rgba(255, 255, 255, 0.05)' },
+        horzLines: { color: 'rgba(255, 255, 255, 0.05)' },
+    },
+    timeScale: {
+        timeVisible: true,
+        secondsVisible: false,
+    },
+});
 
+// 2. Kara Area Series ko Candlestick Series
+const areaSeries = chart.addAreaSeries({
+    topColor: 'rgba(147, 51, 234, 0.56)', // Purple glow
+    bottomColor: 'rgba(147, 51, 234, 0.04)',
+    lineColor: '#a855f7',
+    lineWidth: 2,
+});
+
+// 3. Tsoffin Bayanan Baya (Historical Data)
+const initialData = [
+    { time: '2026-08-03 00:00', value: 72.5 },
+    { time: '2026-08-03 06:00', value: 73.1 },
+    { time: '2026-08-03 12:00', value: 76.4 },
+    { time: '2026-08-03 18:00', value: 78.34 },
+];
+areaSeries.setData(initialData);
+
+// 4. Sabunta Chart din a Real-Time (Live Update)
+// Zaka iya amfani da WebSocket ko `setInterval` don gwaji:
+setInterval(() => {
+    const lastData = initialData[initialData.length - 1];
+    const newPrice = 78.34 + (Math.random() - 0.5) * 2; // Canji marar tsayawa
+    const currentTime = Math.floor(Date.now() / 1000);
+
+    // Sabunta sabon farashi akan live chart
+    areaSeries.update({
+        time: currentTime,
+        value: parseFloat(newPrice.toFixed(2))
+    });
+}, 2000); // Kowace dakika 2 zai sabunta
     </div>
 
 </section>
