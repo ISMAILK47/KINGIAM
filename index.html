@@ -1,302 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>KINGIAM</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KINGIAM</title>
 
-<style>
-body{
-margin:0;
-font-family:Arial,sans-serif;
-background:#0b1020;
-color:white;
-}
-
-header{
-background:#111827;
-padding:15px;
-text-align:center;
-font-size:30px;
-font-weight:bold;
-color:gold;
-}
-
-section{
-padding:20px;
-}
-
-.card{
-background:#1f2937;
-padding:15px;
-margin-top:15px;
-border-radius:10px;
-}
-
-input{
-width:100%;
-padding:12px;
-border:none;
-border-radius:8px;
-margin-top:10px;
-}
-
-button{
-width:100%;
-padding:12px;
-margin-top:10px;
-background:gold;
-border:none;
-border-radius:8px;
-font-size:18px;
-font-weight:bold;
-}
-
-.status{
-display:flex;
-justify-content:space-between;
-margin-top:10px;
-}
-
-.green{
-color:#00ff66;
-}
-
-.red{
-color:#ff4444;
-}
-
-footer{
-background:#111827;
-padding:20px;
-text-align:center;
-margin-top:40px;
-}
-</style>
-
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header>
-👑 KINGIAM
+
+<div class="logo">
+
+<img src="logo.png" alt="KINGIAM Logo">
+
+<h1>KINGIAM</h1>
+
+</div>
+
+<div class="header-icons">
+
+<button>🔍</button>
+
+<button>☰</button>
+
+</div>
+
 </header>
 
-<section>
+<section class="wallet">
 
-<div class="card">
-<h2>AI Crypto Search</h2>
-
-<input
-type="text"
-placeholder="Paste Contract Address">
-
-<button>
-Search Token
-</button>
-
-</div>
-
-<div class="card">
-
-<h2>Coin Information</h2>
-
-<p><b>Name:</b> Waiting...</p>
-
-<p><b>Symbol:</b> --</p>
-
-<p><b>Contract Address:</b> -----------</p>
-
-<p><b>Market Cap:</b> --</p>
-
-<p><b>Liquidity:</b> --</p>
-
-<p><b>Holders:</b> --</p>
-
-<p><b>Price:</b> --</p>
-
-<p><b>Deposit:</b> ✅ Available</p>
-
-<p><b>Withdrawal:</b> ✅ Available</p>
-
-</div>
-
-<div class="card">
-
-<h2>Market Sentiment</h2>
-
-<div class="status">
-
-<div class="green">
-
-Buyers
-
-<br>
-
-80%
-
-</div>
-
-<div class="red">
-
-Sellers
-
-<br>
-
-20%
-
-</div>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<h2>Risk Analysis</h2>
-
-<p>
-
-✔ Honeypot Check
-
-</p>
-
-<p>
-
-✔ Liquidity Lock
-
-</p>
-
-<p>
-
-✔ Contract Verified
-
-</p>
-
-<p>
-
-✔ Mint Function
-
-</p>
-
-<p>
-
-✔ Ownership Status
-
-</p>
-
-<p>
-
-✔ Scam Probability
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h2>Blockchain Academy</h2>
-
-<ul>
-
-<li>Crypto Basics</li>
-
-<li>Wallet Security</li>
-
-<li>Trading Course</li>
-
-<li>Blockchain Technology</li>
-
-<li>DeFi</li>
-
-<li>NFT</li>
-
-</ul>
-
-</div>
-
-<div class="card">
-
-<h2>Crypto Research</h2>
-
-<ul>
-
-<li>Trending Coins</li>
-
-<li>Upcoming Tokens</li>
-
-<li>Market News</li>
-
-<li>Whale Wallets</li>
-
-<li>Token Unlock</li>
-
-</ul>
-
-</div>
-
-<div class="card">
-
-<h2>Security Center</h2>
-
-<ul>
-
-<li>Wallet Protection</li>
-
-<li>Avoid Scam Tokens</li>
-
-<li>Phishing Detection</li>
-
-<li>Safe Investment Tips</li>
-
-</ul>
-
-</div>
-
-<div class="card">
-
-<h2>Portfolio</h2>
-
-<p>Total Balance</p>
+<h2>Total Balance</h2>
 
 <h1>$0.00</h1>
 
-</div>
+<div class="buttons">
 
-<div class="card">
+<button>Deposit</button>
 
-<h2>About KINGIAM</h2>
-
-<p>
-
-KINGIAM is an AI-powered Blockchain Education, Crypto Research and Digital Security Platform built to help everyone trade safely and learn blockchain confidently.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h2>Contact</h2>
-
-<p>Email:</p>
-
-<p>support@kingiam.com</p>
+<button>Withdraw</button>
 
 </div>
 
 </section>
 
-<footer>
+<section class="search">
 
-© 2026 KINGIAM
+<input
+type="text"
+placeholder="Search Coins, Contract Address or Wallet">
 
-<br>
+</section>
 
-Powered by AI
+<section class="coins">
 
-</footer>
+<h2>Meme Coins</h2>
+
+</section>
+
+<section class="chart">
+
+<h2>Live Chart</h2>
+
+</section>
+
+<section class="market">
+
+<h2>Market Overview</h2>
+
+</section>
+
+<section class="gainers">
+
+<h2>Top Gainers</h2>
+
+</section>
+
+<section class="news">
+
+<h2>News & Updates</h2>
+
+</section>
+
+<nav>
+
+<button>🏠 Home</button>
+
+<button>📈 Markets</button>
+
+<button>💱 Trade</button>
+
+<button>👛 Wallet</button>
+
+<button>👤 Profile</button>
+
+</nav>
+
+<script src="script.js"></script>
 
 </body>
-
-  </html>
+</html>
